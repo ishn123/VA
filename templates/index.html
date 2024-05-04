@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Shopping Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Virtual Shopping Assistant</h1>
+<!--        <audio id="default_audio" src="{{ url_for('static', filename='voice/speech.mp3') }}"></audio>-->
+    </header>
+    <main>
+<!--        <section class="voice-input-section">-->
+<!--            <label for="audio-input">Speak your command:</label>-->
+<!--            <input type="file" id="audio-input" accept="audio/*" capture="microphone">-->
+<!--            <button onclick="processVoiceCommand()">Submit</button>-->
+<!--        </section>-->
+
+        <div id="output"></div>
+        <button id="startButton" onclick="startRecognitionLoop()">Start Listening</button>
+        <button id="stopButton" disabled>Stop Listening</button>
+        <section class="product-list-section">
+            <h2>Product List</h2>
+            <div id="product-list"></div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
